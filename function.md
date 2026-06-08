@@ -54,7 +54,8 @@ int main() {
 ## 4. 作为“回调函数”参数（项目/八股高频应用）
 在网络编程（如线程池、事件驱动回调）中，std::function 通常作为参数传递，用来实现解耦。
 ```
-// 一个触发回调的函数，接收一个 std::functionvoid performTask(int x, std::function<void(int)> callback) {
+// 一个触发回调的函数，接收一个 std::function
+void performTask(int x, std::function<void(int)> callback) {
     int result = x * 2; // 模拟任务执行
     callback(result);   // 执行回调
 }
